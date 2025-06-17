@@ -70,7 +70,7 @@ def user_begin_prompt():
     play = input()
     while play != 'a' or play != 'b' or play != 'y':
         print("Hmm. I didn't quite understand that.\nPress A to play, or B to quit.")
-        play - input()
+        play = input()
     if play.lower() == 'a' or play.lower() ==  'y':
         play_quiz()
     elif play.lower() == 'b':
