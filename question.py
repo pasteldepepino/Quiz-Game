@@ -8,13 +8,9 @@ TOPICS_LIST = ['science', 'history', 'commerce', 'technology', 'worldgk']
 def ask_one_question(question):
     print("\n" + question)
     choice = input("Enter Your Choice [a/b/c/d]: ")
-    while(True):
-        if choice.lower() in ['a', 'b', 'c', 'd']:
-            return choice
-        else:
-            print("Invalid choice. Enter again")
-            choice = input("Enter Choice [a/b/c/d]: ")
-
+    while(choice != 'a' or choice != 'b' or choice != 'c' or choice != 'd'):
+        print("Invalid choice. Enter again.")
+        choice = input("Enter Your Choice [a/b/c/d]: ")
 def score_one_result(key, meta):
     actual = meta["answer"]
     if meta["user_response"].lower() == actual.lower():
